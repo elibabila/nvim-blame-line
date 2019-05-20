@@ -37,3 +37,8 @@ To show blame info below the current window instead, put this in your vimrc:
 ```
 let g:blameLineUseVirtualText = 0
 ```
+
+Set the timer to query git blame via (default = 70, instant)
+```
+let g:blameLineDisplayTimer = 2500
+

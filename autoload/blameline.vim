@@ -48,7 +48,7 @@ function! s:createCursorHandler(bufN)
 
         function! s:debouncedHandler(buffer, lineN) closure
             call timer_stop(l:cursorTimer)
-            let l:cursorTimer = timer_start(70, {-> s:handler(a:buffer, a:lineN)})
+            let l:cursorTimer = timer_start(g:blameLineDisplayTimer, {-> s:handler(a:buffer, a:lineN)})
         endfunction
 
         return function('s:debouncedHandler', [a:bufN])
